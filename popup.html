@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./popup.css" />
+</head>
+
+<body>
+
+
+  <div class="logo"><img id="logo" src="images/amoGUS.png"></div>
+  <h1 class="header">Psychological Tab Manager</h1>
+  <div>
+    <label for="timeoutinput">Timeout</label>
+    <br>
+    <input type="number" min="1" id="timeoutinput" value="10" name="timeoutinput">
+    <select id="unitselect">
+      <option value="0">Seconds</option>
+      <option value="1">Minutes</option>
+      <option value="2" selected>Hours</option>
+      <option value="3">Days</option>
+    </select>
+    <a id="resettimeoutbutton">Reset</a>
+    <br>
+    <div id="displayhours">Corresponds to 10 hours</div>
+  </div>
+  <br>
+  <div>
+    <label for="soundbox">Sound to play</label>
+    <br>
+    <select name="soundbox" id="soundbox">
+      <option value="de_m-1.ogg">German Alpha Male</option>
+      <option value="de_m-2.ogg">German Beta Male</option>
+      <option value="uwu_hannah.ogg">UwU</option>
+      <option value="f_moan-1.ogg">Moan</option>
+      <option value="metal_pipe_falling.ogg">Metal Pipe Falling</option>
+      <option value="samsung.ogg">Samsung Notification</option>
+      <option value="step_bro.ogg">What Are You Doing Step Bro</option>
+      <option value="cant_believe.ogg">I Can't Believe You've Done This</option>
+      <option value="rickroll.ogg">Never Gonna Close A Tab</option>
+      <option value="vine_boom.ogg">Vine Boom</option>
+      <option value="amongus_roundstart.ogg">Among Us Round Start</option>
+      <option value="amongus_kill.ogg" selected>Among Us Kill (Impostor)</option>
+      <option value="amongus_kill_crewmate.ogg">Among Us Kill (Crewmate)</option>
+      <option value="amongus_drip.ogg">Among Us Drip</option>
+      <option value="amongus_driplong.ogg">Among Us Drip (Long)</option>
+      <option value="custom">Custom...</option>
+    </select>
+    <div class="randomize" id="chungusdiv">
+      <label for="randomizecheck"><input type="checkbox" id="randomizecheck" name="randomizecheck">Random</label>
+    </div>
+  </div>
+  <br>
+  <div class="fileselect" id="fileselect">
+    <label for="fileinput">Upload your own (max 3 MB)</label>
+    <input type="file" id="fileinput" accept="audio/*">
+    <a id="fileinfo">None Selected</a>
+  </div>
+  <br>
+  <div>
+    <label for="volumeslider">Volume</label>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="1" value="1" step="any" class="slider" id="volumeslider" name="volumeslider">
+    </div>
+  </div>
+  <br>
+  <div class="notification">
+    <label for="displaycheckbox"><input type="checkbox" id="displaycheckbox" name="displaycheckbox">Display notification upon triggering in</label>
+    <select name="notificationlanguage" id="notificationlanguage" disabled>
+      <option value="en">English</option>
+      <option value="de">German</option>
+    </select>
+  </div>
+  <br>
+  <a id="previewbutton">Preview</a>
+  <div id="version">version xx69xx</div>
+
+  <script src="./popup.js" type="module"></script>
+
+</body>
+
+</html>
