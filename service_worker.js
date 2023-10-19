@@ -153,13 +153,7 @@ function isTabSavedYet(tabs) {
         for (i = 0; i < tabs.length; i++) {
             console.log('checking if currentCache tab ' + j + ' matches saved tab ' + i);
             if (!tabs[i].confirmed) {
-                if (tabs[i].id === currentCache[j].id) {
-                    //sachen machen wenn die id stimmt
-                    tabs[i].url = currentCache.splice(j, 1)[0].url;
-                    console.log('tab with id is saved, url updated');
-                    tabs[i].confirmed = true;
-                    break;
-                } else if (tabs[i].url === currentCache[j].url) {
+                if (tabs[i].url === currentCache[j].url) {
                     //sachen machen wenn die url stimmt
                     tabs[i].id = currentCache.splice(j, 1)[0].id;
                     console.log('tab with url is saved, id updated');
