@@ -415,7 +415,16 @@ function playPreview() {
     } else {
         soundFileName = './sounds/' + soundFileName;
     }
-    const audio = new Audio(soundFileName);
-    audio.volume = audioVolume;
-    audio.play();
+    fetch(browser.runtime.getURL(soundFileName))
+        .then(response => response.blob())
+        .then(blob => {
+            var blobUrl = URL.createObjectURL(blob);
+            const audio = new Audio(blobUrl);
+            audio.volume = audioVolume;
+            audio.play();
+            // Cleanup after playing
+            audio.addEventListener('ended', () => {
+                URL.revokeObjectURL(blobUrl);
+            });
+        });
 }

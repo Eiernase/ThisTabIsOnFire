@@ -6,12 +6,12 @@ This is the firefox port of the chromium extension found on [this repository](ht
 Simply install it from [the listing](https://addons.mozilla.org/en-US/firefox/addon/psychological-tab-manager/) in the Firefox Add-on Store.
 
 ## Manually
-You can install the extension unpacked, but it will be removed after a restart. Very fun to debug.
+You can install the extension unpacked, but it will be removed after a restart. If you're using the Dev or Nightly build, you can go to about:config and set xpinstall.signatures.required to false and drop the .zip file into about:addons and it will stay installed.
 
 1. Download source code
 2. Unpack
 3. Go to about:debugging#/runtime/this-firefox
-4. Click on "Load Temporary Add-on
+4. Click on "Load Temporary Add-on"
 5. Select any file from the extension
 
 # Known Issues & Workarounds
